@@ -28,12 +28,12 @@ const validateSignup = [
 
 // 회원가입
 // POST
-// http://127.0.0.1:9090/auth/signup
+// http://127.0.0.1:9091/auth/signup
 router.post("/signup", validateSignup, authController.signup);
 
 // 로그인
 // POST
-// http://127.0.0.1:9090/auth/login
+// http://127.0.0.1:9091/auth/login
 router.post("/login", validateLogin, authController.login);
 
 export default router;

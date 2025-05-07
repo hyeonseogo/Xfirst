@@ -14,30 +14,30 @@ const validatePost = [
 // 모든 포스트 가져오기
 // 해당 아이디에 대한 포스트 가져오기
 // GET
-// http://127.0.0.1:9090/posts/
-// http://127.0.0.1:9090/posts?userid=apple
+// http://127.0.0.1:9091/posts/
+// http://127.0.0.1:9091/posts?userid=apple
 router.get("/", isAuth, postController.getPosts);
 
 // 글번호에 대한 포스트 가져오기
 // GET
-// http://127.0.0.1:9090/posts/:id
+// http://127.0.0.1:9091/posts/:id
 router.get("/:id", isAuth, postController.getPost);
 
 // 포스트 쓰기
 // POST
-// http://127.0.0.1:9090/posts
+// http://127.0.0.1:9091/posts
 // json 형태로 입력 후 저장
 router.post("/", validatePost, isAuth, postController.createPost);
 
 // 포스트 수정하기
 // PUT
-// http://127.0.0.1:9090/posts/:id
+// http://127.0.0.1:9091/posts/:id
 // json 형태로 입력 후 저장
 router.put("/:id", validatePost, isAuth, postController.updatePost);
 
 // 포스트 삭제하기
 // DELETE
-// http://127.0.0.1:9090/posts/:id
+// http://127.0.0.1:9091/posts/:id
 router.delete("/:id", isAuth, postController.deletePost);
 
 export default router;
